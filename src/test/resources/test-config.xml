@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="gem-assignment" verbose="8">
+	<listeners>
+		<listener class-name="com.gem.listeners.CustomReporter" />
+	</listeners>
+
+	<test name="CountryTest">
+		<classes>
+			<class name="com.gem.tests.CountryTest">
+				<methods>
+					<include name="list_missing_countries" />
+					<include name="validate_mismatched_currencyAndCapitals" />
+					<include name="validate_maxBorders" />
+					
+					<!-- Comment/delete any method if you do not want to run it, like below example -->
+					 <!-- <include name="list_missing_countries" /> -->
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
